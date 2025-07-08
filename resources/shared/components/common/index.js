@@ -1,0 +1,18 @@
+import { defineAsyncComponent } from 'vue';
+export const Button = defineAsyncComponent(() => import('./Button.vue'));
+export const EmptyState = defineAsyncComponent(() => import('./EmptyState.vue'));
+export const Spinner = defineAsyncComponent(() => import('./Spinner.vue'));
+export const Box = defineAsyncComponent(() => import('./Box.vue'));
+export const Popover = defineAsyncComponent(() => import('./Popover.vue'));
+export const Paginate = defineAsyncComponent(() => import('./Paginate.vue'));
+export const Thumb = defineAsyncComponent(() => import('./Thumb.vue'));
+export const Badge = defineAsyncComponent(() => import('./Badge.vue'));
+export const Scrollable = defineAsyncComponent(() => import('./Scrollable.vue'));
+export const ActionsList = defineAsyncComponent(() => import('./ActionsList.vue'));
+export const DateRangepicker = defineAsyncComponent(() => import('./DateRangepicker.vue'));
+export const StatusBadge = defineAsyncComponent(() => import('./StatusBadge.vue'));
+export const TooltipBase = defineAsyncComponent(() => import('./TooltipBase.vue'));
+export const DropdownProfile = defineAsyncComponent(() => import('./DropdownProfile.vue'));
+export const PdfViewer = defineAsyncComponent(() => import('./PdfViewer.vue'));
+export const ProgressionChart = defineAsyncComponent(() => import('./ProgressionChart.vue'));
+export const QuestionPlayer = defineAsyncComponent(() => import('./QuestionPlayer.vue'));

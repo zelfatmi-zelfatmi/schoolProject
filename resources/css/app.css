@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./custom-scrollbar";
+@import './transition';
+@import './common';
+@import './forms';
+@import './table';
+@import './button';
+@import './scrollbar';
+@import './editor-content';
+@import './date-picker';
+@import './calendar';
+@import './slider';

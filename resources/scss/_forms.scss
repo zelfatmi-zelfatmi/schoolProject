@@ -1,0 +1,16 @@
+@layer components {
+    .form-control {
+        @apply w-full px-3 h-9 py-1 rounded-lg shadow-sm text-sm border border-gray-300 focus:border-gray-300 ring-gray-300 focus:ring-2 focus:ring-primary focus:outline-none;
+    }
+
+    .appearance-none::-webkit-outer-spin-button,
+    .appearance-none::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    .appearance-none[type='number'] {
+        -moz-appearance: textfield;
+    }
+}

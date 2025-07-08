@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./custom-scrollbar";
+@import './transition';
+@import './common';
+@import './forms';
+@import './table';
+@import './button';
+@import './scrollbar';
+@import './editor-content';
+@import './date-picker';
+@import './calendar';
+@import './slider';
+
+@layer utilities {
+  .bg-primary-hover {
+    background-color: theme('colors["primary-hover"]');
+  }
+}
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-semibold py-2 px-4 rounded transition;
+  }
+
+.btn-primary:hover {
+  @apply bg-primary-hover shadow-md;
+}
+
+  .btn-primary:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}

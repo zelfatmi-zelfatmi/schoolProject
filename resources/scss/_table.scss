@@ -1,0 +1,11 @@
+@layer components {
+    .cell{
+        @apply whitespace-nowrap px-3 py-2 text-sm font-medium text-gray-900
+    }
+    .cell-actions{
+        @apply sticky right-0 bg-white w-10 mx-auto border-l-sticky z-10;
+        div{
+            @apply flex justify-center items-center h-full px-1;
+        }
+    }
+}

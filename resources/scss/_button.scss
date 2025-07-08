@@ -1,0 +1,72 @@
+@layer components {
+    .btn-hover, .btn-m{
+        @apply cursor-pointer active:scale-95 active:opacity-70 transition-all duration-300 outline-none focus:outline-none;
+    }
+    .btn-shadow{
+        -webkit-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+        -moz-box-shadow: 1px 1px 1px rgba(0,0,0, .29), inset 1px 1px 1px rgba(255,255,255, .44);
+        box-shadow: 1px 2px 3px rgba(0,0,0, .15), inset 1px 1px 1px rgba(255, 255, 255, 0.285);
+    }
+    .btn {
+        @apply inline-flex items-center rounded-full text-sm font-semibold active:scale-95 w-fit h-9 px-3 t-3 ;
+    }
+   
+    span:disabled, ul:disabled,li:disabled,p:disabled,svg:disabled, div:disabled, .disabled, a.disabled, button:disabled{
+        @apply ring-gray-200 bg-gray-200 pointer-events-none opacity-90 text-gray-500 shadow-none border-none ;
+    }
+    .btn-primary {
+        @apply bg-primary text-white hover:bg-orange-700 hover:shadow-none btn-shadow
+    }
+    .btn-success {
+        @apply bg-green-500 text-white hover:bg-green-600 hover:shadow-none btn-shadow
+    }
+    .btn-yellow {
+        @apply bg-orange-100 hover:bg-yellow-400 text-black hover:shadow-none shadow-box-2
+    }
+    .btn-info {
+        @apply bg-blue-500 text-white hover:bg-blue-600 hover:shadow-none btn-shadow
+    }
+    .btn-secondary {
+        @apply bg-gray-100 text-black hover:bg-gray-100 hover:shadow-none btn-shadow border-t border-l hover:border-none
+    }
+
+    .btn-danger {
+        @apply bg-red-600 text-white hover:bg-red-700 hover:shadow-none  
+    }
+
+    .btn-dark{
+        @apply bg-black text-white hover:bg-gray-950 hover:shadow-none btn-shadow
+    }
+    .btn.btn-outline {
+        @apply bg-transparent border border-current text-current;
+    }
+
+    .btn.btn-link {
+        @apply hover:text-orange-700 hover:underline text-primary bg-transparent shadow-none border-none ring-transparent px-1 h-fit;
+    }
+    .btn.btn-link.btn-success {
+        @apply hover:text-green-700 text-green-500 
+    }
+    .btn.btn-link.btn-info {
+        @apply hover:text-blue-700 text-blue-500 
+    }
+    .btn.btn-link.btn-danger {
+        @apply hover:text-red-700 text-red-500
+    }
+    .btn.btn-link.btn-dark {
+        @apply hover:text-slate-900 text-black
+    }
+    .relative.btn.btn-link.btn-mono {
+        @apply text-xs p-0 font-medium hover:underline h-auto
+    }
+
+    
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

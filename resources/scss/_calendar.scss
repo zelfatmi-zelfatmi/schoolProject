@@ -1,0 +1,17 @@
+@layer components {
+    .calendar-item {
+        grid-column-start: var(--start);
+    }
+    }
+.bg-planning-cpf {
+    background-image: repeating-linear-gradient(
+        45deg,
+        #eee,
+        #eee 4px,
+        var(--planning-color, '#222') 4px,
+        var(--planning-color, '#222') 8px
+    );
+}
+.bg-planning-general {
+    background-color: var(--planning-color, '#222');
+}
