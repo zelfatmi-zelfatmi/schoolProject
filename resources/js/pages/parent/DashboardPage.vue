@@ -85,6 +85,7 @@ import axios from 'axios';
 const router = useRouter();
  axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
+ 
 // Fonction de déconnexion
 const logout = async () => {
     try {
