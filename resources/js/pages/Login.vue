@@ -72,7 +72,6 @@ import AuthenticationCardLogo from '@shared/components/Old/AuthenticationCardLog
 import TextField from '@shared/components/forms/TextField.vue'
 import Checkbox from '@shared/components/forms/Checkbox.vue'
 import Button from '@shared/components/common/Button.vue'
-import axios from 'axios';
 
 // import { useMutation, useParams } from '@shared/hooks';
 import { useForm } from '@inertiajs/vue3';

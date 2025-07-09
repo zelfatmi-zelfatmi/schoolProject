@@ -76,7 +76,30 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'; // Pour la redirection
+import axios from 'axios';
 
+
+
+// Référence pour router
+const router = useRouter();
+ axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+// Fonction de déconnexion
+const logout = async () => {
+    try {
+        // Appel de l'API pour se déconnecter
+        const response = await axios.post('/logout'); // Assure-toi que cette route est bien définie
+
+        console.log(response.data.message); // Afficher le message de succès
+         window.location.href = '/login';
+
+        // Rediriger vers la page de connexion
+        // router.push({ name: 'login' }); // Redirige vers la page de connexion (à adapter si nécessaire)
+    } catch (error) {
+        console.error('Erreur lors de la déconnexion', error);
+    }
+};
 const parentName = 'Mme El Fatmi';
 const enfants = ref([
   {
