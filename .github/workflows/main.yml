@@ -10,7 +10,7 @@ deploy_prod:
     - ssh u613785471@195.200.13.4 "cd /home/u613785471/domains/schoolsoutien.com/public_html/schoolProject && git pull origin main"
   only:
     - main
-  when: always
+  when: manual  
   environment:
     name: production
-    url: https://schoolsoutien.com/  
+    url: https://schoolsoutien.com/
