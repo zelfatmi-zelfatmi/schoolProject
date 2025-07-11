@@ -1,0 +1,16 @@
+deploy_prod:
+  stage: deploy
+  before_script:
+    - apt-get update && apt-get install -y openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -H "195.200.13.4" >> ~/.ssh/known_hosts  # Enlever $ devant l'IP
+  script:
+    - ssh u613785471@195.200.13.4 "cd /home/u613785471/domains/schoolsoutien.com/public_html/schoolProject && git pull origin main"
+  only:
+    - main
+  when: always
+  environment:
+    name: production
+    url:https://schoolsoutien.com/
