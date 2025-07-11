@@ -13,4 +13,4 @@ deploy_prod:
   when: always
   environment:
     name: production
-    url:https://schoolsoutien.com/
+    url: https://schoolsoutien.com/  
