@@ -17,6 +17,8 @@
         <p class="text-sm text-gray-600">Voici le tableau de bord de vos enfants</p>
       </div>
     </div>
+    <!-- Enfants et progression -->
+
 
     <!-- Enfants et progression -->
     <div v-for="enfant in enfants" :key="enfant.id" class="bg-white rounded-xl shadow p-6">
@@ -85,7 +87,7 @@ import axios from 'axios';
 const router = useRouter();
  axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
- 
+
 // Fonction de déconnexion
 const logout = async () => {
     try {
