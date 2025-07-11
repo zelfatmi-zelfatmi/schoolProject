@@ -18,16 +18,15 @@ jobs:
 
       - name: Deploy to server
         run: |
-          sshpass -p "ABCd@@123456*." ssh -o StrictHostKeyChecking=no -p 65002 u613785471@195.200.13.4 "
+          sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no -p 65002 u613785471@195.200.13.4 "
             cd /home/u613785471/domains/schoolsoutien.com/public_html/schoolProject && 
-            git pull origin main &&
-            npm install &&
-            npm run build
+            git pull origin main
           "
 
     # Si tu veux définir une variable d'environnement
     env:
       SSH_PASSWORD: "ABCd@@123456*."  # Injections directes du mot de passe pour tester
+
 
 
 
