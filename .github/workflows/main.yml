@@ -11,15 +11,20 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2  # Cette action permet de récupérer le code source du dépôt
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3  # Utilise l'action ssh-agent pour configurer la clé SSH
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Charge ta clé privée SSH depuis les secrets GitHub
-
-      - name: Deploy to server
+      - name: Set up SSH with password
         run: |
-            cd /home/u613785471/domains/schoolsoutien.com/public_html/schoolProject &&
+          sudo apt-get update
+          sudo apt-get install -y sshpass  # Installer sshpass pour fournir le mot de passe
+          
+          # Utiliser sshpass pour se connecter au serveur avec un mot de passe
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeyChecking=no -p 65002 u613785471@195.200.13.4 "
+            cd /home/u613785471/domains/schoolsoutien.com/public_html/schoolProject && 
             git pull origin main &&
             npm install &&
             npm run build
+          "
+
+    env:
+      SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}  # Charge ton mot de passe SSH depuis les secrets GitHub
+
 
